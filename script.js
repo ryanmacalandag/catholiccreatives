@@ -6,16 +6,6 @@ dropDown.forEach((i) => {
     
     thisDropDown.classList.toggle('close');
 
-    // const menuItems = thisDropDown.querySelectorAll('li')
-    // menuItems.forEach((j) => {
-    //   j.addEventListener('click', (f) => {
-    //     console.log(f.target.textContent);
-    //     console.log(thisDropDown);
-    //     thisDropDown.innerText = f.target.textContent;
-    //   })
-    // })
-
-
   })
 })
 
