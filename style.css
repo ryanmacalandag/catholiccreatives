@@ -176,8 +176,7 @@ ul.top-nav li.active, ul.top-nav li:hover {
 }
 
 .boxed {
-  max-width: 1140px;
-  max-width: 1140px;
+  /* max-width: 1140px; */
   margin: 0 auto;
   padding: 0 1rem;
 }
