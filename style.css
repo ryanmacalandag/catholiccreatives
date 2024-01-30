@@ -162,6 +162,16 @@ ul.top-nav li.active, ul.top-nav li:hover {
   left: .2rem;
 }
 
+@media (max-width: 780px) {
+  header {
+    padding: 1rem;
+  }
+
+  ul.top-nav {
+    display: none;
+  }
+}
+
 /* Spacer */
 
 .spacer {
@@ -190,6 +200,7 @@ ul.top-nav li.active, ul.top-nav li:hover {
   align-items: center;
   width: 100%;
   margin: 2rem auto;
+  max-width: 1230px;
 }
 
 .dropdown {
@@ -268,7 +279,7 @@ ul.top-nav li.active, ul.top-nav li:hover {
   border-radius: 5rem;
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 780px) {
   .tags {
     display: none;
   }
