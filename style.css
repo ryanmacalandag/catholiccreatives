@@ -36,6 +36,10 @@ a:hover {
   color: var(--clr-primary);
 }
 
+.dark a {
+  color: var(--clr-primary-lightest);
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -47,7 +51,6 @@ img {
 html {
   font-family: var(--fnt-body);
   font-size: 16px;
-  color: var(--clr-black);
 }
 
 body {
@@ -58,6 +61,12 @@ body {
   width: 100%;
   min-height: 100dvh;
   background-color: var(--clr-white);
+  color: var(--clr-black);
+}
+
+body.dark {
+  background-color: var(--clr-primary-dark);
+  color: var(--clr-white);
 }
 
 /* Header */
@@ -131,11 +140,6 @@ ul.top-nav {
 ul.top-nav li {
   padding: .65rem;
   transition: 300ms;
-  color: var(--clr-primary);
-}
-
-ul.top-nav li.active, ul.top-nav li:hover {
-  color: var(--clr-primary-light);
 }
 
 .search {
@@ -152,19 +156,39 @@ ul.top-nav li.active, ul.top-nav li:hover {
   position: relative;
 }
 
+.dark .theme-toggle-container {
+  border: 1px solid var(--clr-primary-light);
+}
+
 .theme-toggle {
   background-color: var(--clr-primary);
   width: .65rem;
   height: .65rem;
   border-radius: 3rem;
   position: absolute;
-  top: .1rem;
-  left: .2rem;
+  top: 50%;
+  transform: translate(30%,-50%);
+  transition: 300ms;
+}
+
+.dark .theme-toggle {
+  border: 1px solid var(--clr-primary-light);
+}
+
+.dark .theme-toggle
+{
+  background-color: var(--clr-primary);
+  width: .65rem;
+  height: .65rem;
+  border-radius: 3rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(170%,-50%);
 }
 
 @media (max-width: 780px) {
   header {
-    padding: 1rem;
+    padding: 1rem 2rem;
   }
 
   ul.top-nav {
@@ -186,9 +210,10 @@ ul.top-nav li.active, ul.top-nav li:hover {
 }
 
 .boxed {
-  /* max-width: 1140px; */
+  width: 100%;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 /* Filter Container */
@@ -198,9 +223,8 @@ ul.top-nav li.active, ul.top-nav li:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  gap: 1rem;
   margin: 2rem auto;
-  max-width: 1230px;
 }
 
 .dropdown {
@@ -260,6 +284,7 @@ ul.top-nav li.active, ul.top-nav li:hover {
   display: flex;
   flex-direction: row;
   gap: .5rem;
+  overflow: hidden;
 }
 
 .tag {
@@ -269,6 +294,8 @@ ul.top-nav li.active, ul.top-nav li:hover {
   font-weight: 700;
   height: fit-content;
   cursor: pointer;
+  word-break: keep-all;
+  min-width: fit-content;
 }
 
 .tag:hover {
@@ -291,7 +318,7 @@ ul.top-nav li.active, ul.top-nav li:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-auto-rows: 240px;
-  gap: 2rem;  
+  gap: 1rem;  
 }
 
 .gallery .item-container {
