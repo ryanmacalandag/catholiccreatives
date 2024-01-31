@@ -7,14 +7,10 @@ const filtersButton = document.querySelector('.dropdown.filters');
 const filtersContainer = document.querySelector('#filter-styles');
 
 // Filter bar
-let currentSociality = "All";
+let currentSociality = "all";
 
-console.log(dropDownItems)
-
-selectedSociality.textContent = currentSociality;
-
-const setCurrentSociality = (sociality) => {
-  selectedSociality.textContent = sociality;
+window.onload = () => {
+  selectedSociality.textContent = currentSociality;
 }
 
 dropDown.forEach((i) => {
@@ -24,7 +20,26 @@ dropDown.forEach((i) => {
 
     dropDownItems.forEach((j) => {
       j.addEventListener('click', (e) => {
-        setCurrentSociality(j.dataset.sociality);
+        selectedSociality.textContent = j.dataset.sociality;
+        currentSociality = j.dataset.sociality;
+
+        // Grab all gallery items
+        const galleryItems = document.querySelectorAll('#main-gallery .item-container');
+        
+        galleryItems.forEach((item) => {
+          
+          item.classList.add('hidden');
+
+          // convert string into array
+          let socialityList = item.dataset.sociality.split(" "); 
+
+          if (socialityList.includes(currentSociality)) {
+            item.classList.remove('hidden')
+          } else if (currentSociality == 'all') {
+            item.classList.remove('hidden')
+          }
+        })
+
       })
     })
 
@@ -49,7 +64,7 @@ async function getGalleryData() {
 }
 
 getGalleryData().then((data) => {
-  const galleryItems = data;
+  const galleryData = data;
 
   // Create main gallery from data using template
   const mainGallery = document.querySelector('#main-gallery');
@@ -59,7 +74,7 @@ getGalleryData().then((data) => {
   galleryList.classList.add('gallery');
   galleryList.classList.add('boxed');
 
-  galleryItems.forEach((item) => {
+  galleryData.forEach((item) => {
 
     // Clone inner content of template
     // Then grab li element

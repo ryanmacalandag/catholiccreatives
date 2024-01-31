@@ -249,6 +249,7 @@ ul.top-nav li {
   justify-content: space-between;
   align-items: center;
   gap: .5rem;
+  text-transform: capitalize;
 }
 
 .dark .dropdown .selected {
@@ -390,6 +391,12 @@ ul.top-nav li {
 .gallery .item-container:hover {
   opacity: .65;
 }
+
+.gallery .item-container.hidden {
+  display: none;
+}
+
+
 
 
 
