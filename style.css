@@ -17,8 +17,8 @@
   --clr-primary-light: hsl(107, 31%, 42%);
   --clr-primary-lighter: hsl(107, 31%, 70%);
   --clr-primary-lightest: hsl(76, 27%, 89%);
-  --clr-primary-dark: hsl(105, 25%, 9%);
-  --clr-primary-darker: hsl(108, 10%, 10%);
+  --clr-primary-dark: hsl(106, 26%, 16%);
+  --clr-primary-darker: hsl(120, 2%, 17%);
 
   --clr-white: hsl(120, 6%, 97%);
   --clr-light-gray: hsl(108, 4%, 73%);
@@ -65,11 +65,11 @@ body {
   width: 100%;
   min-height: 100dvh;
   background-color: var(--clr-white);
-  color: var(--clr-black);
+  color: var(--clr-primary-darker);
 }
 
 body.dark {
-  background-color: var(--clr-primary-dark);
+  background-color: var(--clr-primary-darker);
   color: var(--clr-white);
 }
 
@@ -250,6 +250,10 @@ ul.top-nav li {
   gap: 1rem;
 }
 
+.dark .dropdown .selected {
+  border: 1px solid var(--clr-primary);
+}
+
 .dropdown ul {
   display: flex;
   flex-direction: column;
@@ -306,8 +310,16 @@ ul.top-nav li {
   min-width: fit-content;
 }
 
+.dark .tag {
+  border: 1px solid var(--clr-primary);
+}
+
 .tag:hover {
   background-color: var(--clr-primary-lightest);
+}
+
+.dark .tag:hover {
+  background-color: var(--clr-primary);
 }
 
 .dropdown.filters {
