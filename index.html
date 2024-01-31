@@ -36,11 +36,12 @@
 
   <div class="filter-container boxed">
     <div class="dropdown sociality close">
-      <p class="selected">Popular<i class='bx bxs-chevron-down'></i></p>
+      <p class="selected"><span class="selected-text">All</span><i class='bx bxs-chevron-down'></i></p>
       <ul>
-        <a href="#"><li data-sociality="Popular">Popular</li></a>
-        <a href="#"><li data-sociality="Following">Following</li></a>
-        <a href="#"><li data-sociality="New">New</li></a>
+        <a href="#"><li data-sociality="All" data-selected="true">All</li></a>
+        <a href="#"><li data-sociality="Popular" data-selected="false">Popular</li></a>
+        <a href="#"><li data-sociality="Following" data-selected="false">Following</li></a>
+        <a href="#"><li data-sociality="New" data-selected="false">New</li></a>
       </ul>
     </div>
     <div class="tags">
@@ -53,6 +54,17 @@
     </div>
     <div class="dropdown filters close">
       <p class="selected">Filter <i class='bx bx-filter'></i></p>
+    </div>
+  </div>
+
+  <div id="filter-styles" class="filter-container boxed">
+    <div class="tags">
+      <span class="tag">Photography</span>
+      <span class="tag">Graphics</span>
+      <span class="tag">Artwork</span>
+      <span class="tag">Video</span>
+      <span class="tag">Iconography</span>
+      <span class="tag">Music</span>
     </div>
   </div>
 
