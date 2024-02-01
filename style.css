@@ -371,6 +371,7 @@ ul.top-nav li {
 .checkbox-container {
   columns: 2;
   margin-top: 1rem;
+  margin-bottom: 1.25rem;
 }
 .check-group {
   margin: 0 1rem 0.5rem 0;
@@ -397,8 +398,9 @@ ul.top-nav li {
 }
 
 @media screen and (max-width: 780px) {
-  .dropdown .label span {
-    display: none;
+  .title-container h1 {
+    font-size: 1.45rem;
+    line-height: 1.9rem;
   }
 }
 

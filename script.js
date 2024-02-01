@@ -8,8 +8,8 @@ const filtersContainer = document.querySelector('#filter-styles');
 const title = document.querySelector('#title');
 
 // Filter bar
-let currentSociality = "popular";
-let defaultTitle = "Currently popular";
+let currentSociality = "all";
+let defaultTitle = "all creative works";
 
 window.onload = () => {
   selectedSociality.textContent = currentSociality;
