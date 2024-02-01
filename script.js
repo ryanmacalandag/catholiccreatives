@@ -39,12 +39,9 @@ dropDown.forEach((i) => {
           if (socialityList.includes(currentSociality)) {
             item.classList.remove('hidden')
             title.textContent = currentSociality;
-            if (currentSociality == 'popular') {
-              title.textContent = defaultTitle;
-            }
           } else if (currentSociality == 'all') {
+            title.textContent = defaultTitle;
             item.classList.remove('hidden');
-            title.textContent = currentSociality;
           }
         })
 
