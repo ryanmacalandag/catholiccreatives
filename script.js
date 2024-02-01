@@ -5,9 +5,12 @@ const DOMbody = document.querySelector('body');
 const selectedSociality = document.querySelector('.dropdown.sociality .selected-text');
 const filtersButton = document.querySelector('.dropdown.filters');
 const filtersContainer = document.querySelector('#filter-styles');
+const title = document.querySelector('#title');
 
 // Filter bar
-let currentSociality = "all";
+let currentSociality = "popular";
+let defaultTitle = "Popular";
+title.textContent = defaultTitle;
 
 window.onload = () => {
   selectedSociality.textContent = currentSociality;
@@ -16,7 +19,7 @@ window.onload = () => {
 dropDown.forEach((i) => {
   i.addEventListener('click', (e) => {
     const thisDropDown = e.target.closest('.dropdown');
-    thisDropDown.classList.toggle('close');
+    thisDropDown.classList.contains('close') ? thisDropDown.classList.remove('close') : thisDropDown.classList.add('close');
 
     dropDownItems.forEach((j) => {
       j.addEventListener('click', (e) => {
@@ -35,8 +38,13 @@ dropDown.forEach((i) => {
 
           if (socialityList.includes(currentSociality)) {
             item.classList.remove('hidden')
+            title.textContent = currentSociality;
+            if (currentSociality == 'popular') {
+              title.textContent = defaultTitle;
+            }
           } else if (currentSociality == 'all') {
-            item.classList.remove('hidden')
+            item.classList.remove('hidden');
+            title.textContent = currentSociality;
           }
         })
 

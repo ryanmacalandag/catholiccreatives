@@ -20,9 +20,6 @@
       <p class="logo-text">font</p>
     </div>
     <div class="menu-container">
-      <div class="search">
-        <i class='bx bx-search'></i>
-      </div>
       <ul class="top-nav">
         <a href="#"><li>Find Talent</li></a>
         <a href="#"><li>Blog</li></a>
@@ -44,29 +41,77 @@
         <a href="#"><li data-sociality="new" data-selected="false">New</li></a>
       </ul>
     </div>
-    <div class="tags">
-      <span class="tag">Social Media</span>
-      <span class="tag">Websites</span>
-      <span class="tag">Print</span>
-      <span class="tag">Publications</span>
-      <span class="tag">Branding</span>
-      <span class="tag">Events</span>
-      <div class="tags-gradient-edge"></div>
-    </div>
+
     <div class="dropdown filters close">
-      <p class="label"><span>Filter</span><i class='bx bx-filter'></i></p>
+      <p class="label"><span>Search</span><i class='bx bx-search'></i></p>
     </div>
   </div>
 
   <div id="filter-styles" class="filter-container boxed">
-    <div class="tags">
-      <span class="tag">Photography</span>
-      <span class="tag">Graphics</span>
-      <span class="tag">Artwork</span>
-      <span class="tag">Video</span>
-      <span class="tag">Iconography</span>
-      <span class="tag">Music</span>
+
+    <div class="filter-options-container">
+      <div class="filter-explainer">
+        <div role="group" aria-labelledby="group-heading">
+          <h3 id="group-heading">Search</h3>
+          <div class="tags-container">
+            <!-- <p>Search all keywords and tags.</p> -->
+            <div class="search-container">
+              <input type="search" name="" placeholder="Type keyword">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-group project-type">
+        <div role="group" aria-labelledby="group-heading">
+          <h3 id="group-heading">Category Tags</h3>
+          <div class="tags-container">
+            <p class="tag">social media</p>
+            <p class="tag">websites</p>
+            <p class="tag">print</p>
+            <p class="tag">publications</p>
+            <p class="tag">branding</p>
+            <p class="tag">events</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="filter-group media-type">
+        <div role="group" aria-labelledby="group-heading">
+          <h3 id="group-heading">Select media type(s)</h3>
+          <div class="checkbox-container">
+            <div class="check-group">
+              <input type="checkbox" name="graphic design">
+              <label for="photography">Graphic Design</label>
+            </div>
+            <div class="check-group">
+              <input type="checkbox" name="photography">
+              <label for="photography">Photography</label>
+            </div>
+            <div class="check-group">
+              <input type="checkbox" name="video">
+              <label for="photography">Video</label>
+            </div>
+            <div class="check-group">
+              <input type="checkbox" name="web-design">
+              <label for="photography">Web Design</label>
+            </div>
+            <div class="check-group">
+              <input type="checkbox" name="animation">
+              <label for="photography">Animation</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
+    
+  </div>
+  
+  <div class="title-container boxed">
+    <h1>Showing: <span id="title"></span></h1>
   </div>
 
   <div id="main-gallery" class="gallery-container">
@@ -78,7 +123,7 @@
       <div class="artwork">
         <img src="" alt="">
         <div class="artwork-overlay">
-          <i class='bx bx-download'></i>
+          <i class='bx bx-fullscreen'></i>
         </div>
       </div>
       <div class="item-info">
