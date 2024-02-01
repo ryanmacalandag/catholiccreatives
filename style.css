@@ -372,20 +372,20 @@ ul.top-nav li {
   display: flex;
   width: 100%;
   justify-content: center;
+  margin: 2rem 0 6rem;
 }
 
 .gallery.boxed {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-auto-rows: 240px;
-  gap: 1rem; 
+  gap: 2rem; 
   padding: 1rem 0; 
 }
 
 .gallery .item-container {
-  border-radius: .5rem;
-  overflow: hidden;
   transition: 300ms;
+  list-style: none;
 }
 
 .gallery .item-container:hover {
@@ -395,6 +395,47 @@ ul.top-nav li {
 .gallery .item-container.hidden {
   display: none;
 }
+
+.item-info
+{
+  display: flex;
+  justify-content: space-between;
+  margin-top: .75rem;
+}
+
+.artwork {
+  height: 88%;
+  border-radius: .5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.item-container .artwork-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0,0%,0%,.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  color: var(--clr-white);
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+.item-container:hover .artwork-overlay {
+  display: flex;
+
+}
+
+
+
+
+
+
 
 
 

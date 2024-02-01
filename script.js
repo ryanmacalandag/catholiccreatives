@@ -80,6 +80,7 @@ getGalleryData().then((data) => {
     // Then grab li element
     const li = itemTemplate.content.cloneNode(true).querySelector('li');
     const img = li.querySelector('img');
+    const authorName = li.querySelector('.author-name');
 
     // Fill gallery item data
     li.dataset.sociality = item.sociality;
@@ -90,6 +91,7 @@ getGalleryData().then((data) => {
     // Fill gallery image data
     img.src = item.url;
     img.alt = item.title;
+    authorName.textContent = item.author;
 
     // Append li item to ul list
     galleryList.append(li);
