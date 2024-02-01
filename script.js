@@ -9,11 +9,11 @@ const title = document.querySelector('#title');
 
 // Filter bar
 let currentSociality = "popular";
-let defaultTitle = "Popular";
-title.textContent = defaultTitle;
+let defaultTitle = "Currently popular";
 
 window.onload = () => {
   selectedSociality.textContent = currentSociality;
+  title.textContent = defaultTitle;
 }
 
 dropDown.forEach((i) => {
