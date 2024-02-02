@@ -425,7 +425,7 @@ ul.top-nav li {
 
 .gallery.boxed {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-auto-rows: 240px;
   gap: 2rem; 
   padding: 1rem; 
@@ -485,12 +485,15 @@ ul.top-nav li {
 #view-item-container {
   display: none;
 }
+.dark #view-item-container.open {
+  background-color: var(--clr-primary-darker); 
+}
 
 #view-item-container.open {
   position: fixed;
   z-index: 50;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   background-color: var(--clr-white);
   gap: 1rem;
   width: 100%;
