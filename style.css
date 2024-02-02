@@ -218,7 +218,7 @@ ul.top-nav li {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 1rem;
 }
 
 /* Filter Container */
@@ -428,7 +428,7 @@ ul.top-nav li {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-auto-rows: 240px;
   gap: 2rem; 
-  padding: 1rem 0; 
+  padding: 1rem; 
 }
 
 .gallery .item-container {
@@ -490,7 +490,7 @@ ul.top-nav li {
   position: fixed;
   z-index: 50;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   background-color: var(--clr-white);
   gap: 1rem;
   width: 100%;
@@ -513,8 +513,26 @@ body:has(#view-item-container.open) {
   position: absolute;
   top: 2rem;
   right: 2rem;
-  font-size: 2rem;
-  color: var(--clr-primary-light);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .5rem;
+  text-transform: uppercase;
+  background-color: var(--clr-primary-light);
+  padding: .5rem 1rem;
+  border-radius: .3rem;
+  cursor: pointer;
+  color: var(--clr-white);
+}
+
+.view-close-btn p {
+  font-size: .85rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.view-close-btn .bx {
+  font-size: 1.15rem;
 }
 
 
