@@ -15,6 +15,23 @@
 
 <body>
 
+  <!-- View gallery item popup -->
+  <div id="view-item-container" class="">
+    <template id="view-item-template">
+        <div class="view-image-col">
+          <img src="" alt="" class="this-image">
+        </div>
+        <div class="view-info-col">
+          <h3 class="this-title">Artwork title</h3>
+          <p class="this-author">Name of Artist</p>
+        </div>
+        <div class="view-close-btn">
+          <i class='bx bx-collapse'></i>
+        </div>
+    </template>
+  </div>
+
+  <!-- Logo and navigation -->
   <header>
     <div class="logo-container">
       <p class="logo-text">font</p>
@@ -131,11 +148,11 @@
 
   <!-- Gallery item template -->
   <template id="item-template">
-    <li class="item-container" data-sociality="" data-category="" data-tags="" data-medium="">
+    <li class="item-container" onclick="viewGalleryItem(this)" data-sociality="" data-category="" data-tags="" data-medium="" data-imgurl="" data-author="" data-title="">
       <div class="artwork">
         <img src="" alt="">
         <div class="artwork-overlay">
-          <i class='bx bx-fullscreen'></i>
+          <i class='bx bx-expand'></i>
         </div>
       </div>
       <div class="item-info">

@@ -68,6 +68,7 @@ async function getGalleryData() {
   return data;
 }
 
+// Main Gallery
 getGalleryData().then((data) => {
   const galleryData = data;
 
@@ -92,6 +93,9 @@ getGalleryData().then((data) => {
     li.dataset.category = item.category;
     li.dataset.tags = item.tags;
     li.dataset.medium = item.tags;
+    li.dataset.imgurl = item.url;
+    li.dataset.author = item.author;
+    li.dataset.title = item.title;
 
     // Fill gallery image data
     img.src = item.url;
@@ -107,4 +111,38 @@ getGalleryData().then((data) => {
   mainGallery.append(galleryList);
 
 })
+
+// View gallery item
+const viewItemContainer = document.querySelector('#view-item-container');
+const viewItemTemplate = document.querySelector('#view-item-template');
+
+const viewNode = viewItemTemplate.content.cloneNode(true);
+
+console.log(viewItemTemplate)
+
+const viewGalleryItem = (item) => {
+  console.log(item);
+  // Open the view container
+  viewItemContainer.classList.add('open');
+
+  // Build item in view container
+  viewItemContainer.append(viewNode);
+
+  // Item image
+  const thisImage = viewItemContainer.querySelector('.this-image');
+  thisImage.src = item.dataset.imgurl;
+
+  // Item details
+  const thisTitle = viewItemContainer.querySelector('.this-title');
+  const thisAuthor = viewItemContainer.querySelector('.this-author');
+
+  thisTitle.textContent = item.dataset.title || "No Title";
+  thisAuthor.textContent = item.dataset.author;
+
+  // Handle close button
+  const viewCloseBtn = document.querySelector('.view-close-btn');
+  viewCloseBtn.addEventListener('click', () => {
+    viewItemContainer.classList.remove('open');
+  })
+}
 
