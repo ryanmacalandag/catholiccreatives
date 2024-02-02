@@ -193,7 +193,11 @@ ul.top-nav li {
 
 @media (max-width: 780px) {
   header {
-    padding: 1rem 0rem 2rem;
+    padding: 1rem 1rem 2rem 0;
+  }
+
+  .logo-text {
+    font-size: 2.4rem;
   }
 
   ul.top-nav {
